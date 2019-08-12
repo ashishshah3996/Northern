@@ -1,0 +1,49 @@
+<section class="login container">
+  <div><p class="login-message">Prepare for your career with a Project Management, Web-development, Graphic design, or Digital Marketing Internship at Northern.</p></div>
+  <div>
+    <form #f="ngForm"  class="login-form">
+      <div class="login-form-input-group">
+        <div class="login-form-input login-form__email ">
+            <div class="help-block" *ngIf="!emailInput.hasError('required') && emailInput.hasError('email')">
+                Please enter a valid email address
+            </div>
+              <input
+                  elementfocus
+                  matInput
+                  class="email-input"
+                  placeholder="Your Email Address*"
+                  ngModel
+                  name="email"
+                  type="email"
+                  #emailInput="ngModel"
+                  required
+                  email
+            />
+        </div>
+        <div class="login-form-input" >
+            <select
+             [ngStyle]="{'color': '#7a7878'}"
+             name="interest"
+             ngModel
+             interest >
+                <option hidden value="" disabled selected >Your Interests</option>
+                <option value="development">Development</option>
+              </select>
+        </div>
+      </div>
+      <div>
+        <button
+          class="login-submit"
+          type="submit"
+          [disabled]="!f.valid"
+          (click)= "onSubmit(f)"
+        >
+          {{ loading ? "Submitting.." : "Sign Up Now" }}
+          <mat-icon *ngIf="!loading" [ngStyle]="{'position':'absolute'}">play_arrow</mat-icon>
+        </button>
+      </div>
+  </form>
+</div>
+
+
+</section>

@@ -1,0 +1,50 @@
+@import "../../../partials/variables";
+$email_margin:15px;
+.login{
+    .login-message{
+        color:$northern-white;
+        font-size:20px;
+    }
+    .login-submit{
+        width:100%;
+        background:$northern-red;
+        color:$northern-white;
+        border:none;
+        border:1 px solid $northern-red;
+        border-radius:0px;
+        font-weight:bold;
+        font-size:20px;
+        padding:10px 0px;
+        margin:15px 0px;
+    }
+    .login-form-input-group{
+        display:flex;
+        justify-content: space-between;
+        margin-top:40px;
+        .login-form-input{
+            flex: auto;
+            width:100%;
+            text-align: right;
+            box-sizing: border-box;
+            input,select{
+                width:calc(100% - #{$email_margin});
+                padding:15px;
+                box-sizing: border-box;
+            }
+            input.ng-invalid.ng-touched {
+                border: 1px solid $northern-red;
+            }
+        }
+        .login-form__email{
+            text-align: left !important;
+        }
+        .help-block{
+            color:$northern-white;
+            text-align: right !important;
+            padding-right:15px;
+            box-sizing: border-box;
+            margin-top:-18px;
+        }
+    }
+    
+}

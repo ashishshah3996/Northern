@@ -1,0 +1,12 @@
+@import "../../../partials/variables";
+.header-title{
+  color:$northern-white;
+  font-family:'Montserrat';
+  font-size:65px;
+}
+.header-underline{
+  background:$northern-red;
+  width:300px;
+  height:10px;
+  margin-bottom: 50px;
+}
