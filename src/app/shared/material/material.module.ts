@@ -15,11 +15,11 @@ import { MatSnackBarModule } from "@angular/material/snack-bar";
 import { MatToolbarModule } from "@angular/material/toolbar";
 import { NgModule } from '@angular/core';
 
-//Angular Material modules
+// Angular Material modules
 
 
 
-const modules=[
+const modules = [
   MatButtonModule,
   MatCheckboxModule,
   MatToolbarModule,
